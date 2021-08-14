@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔒Đăng nhập</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css' />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reponsive.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <div class="menu-mobile">
+        <span onclick="closeMobile()">Tắt</span>
+        <ul>
+            <li><a href="./index.html">Trang chủ</a></li>
+            <li><a href="./shop.html">Cửa hàng</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Bài viết</a></li>
+            <li><a href="./contact.html">Liên hệ</a></li>
+            <li><a href="./login.html">Đăng nhập</a></li>
+            <li><a href="./register.html">Đăng kí</a></li>
+        </ul>
+    </div>
+    <section>
+        <p> <marquee><String style="height: 30px; width: 100%; font-size: 20px;color: rgb(47, 128, 0);"> 🍉 Sale sốc trong mùa dịch 40% cho tất cả sản phẩm - vì 1 mùa dịch ấm no 📸</String></marquee></p>
+        <!--  -->
+    </section>
+    <header id="header">
+        <nav>
+            <div class="nav-top">
+                <div class="nav-top-left">
+                    <div class="nav-logo">
+                        <a href="./index.html">
+                            <img src="./images/logotra.png " alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="nav-top-center">
+                    <ul class="mobile-menu">
+                        <li onclick="toggleMobile()">
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                            <span>Menu</span>
+                        </li>
+                    </ul>
+                    <ul class="desktop-menu"data-aos="fade-up" data-aos-delay="200">
+                        <li><a href="./index.html">Trang chủ</a></li>
+                        <li><a href="./shop.html">Cửa hàng</a></li>
+                        <li><a href="">Bài viết</a></li>
+                <li><a href="./contact.html">Liên hệ</a></li>
+               <li><a href="./login.html">Đăng nhập</li>
+                <li><a href="./register.html">Đăng kí</a></li>
+                    </ul>
+                </div>
+                <div class="nav-top-right">
+                    <ul>
+                        <li><a href=""><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                        <li>
+                            <a href="">
+                                <i class="fa fa-heart" aria-hidden="true"></i>
+                                <span class="love-qty">2</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <span class="cart-qty">1</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-bottom"data-aos="fade-up" data-aos-delay="200">
+                <div class="nav-bottom-left">
+                    <button onclick="toggleCategory()"><i class="fa fa-bars" aria-hidden="true"></i>  Phân loại hàng
+                    </button>
+                </div>
+                <div class="nav-bottom-search"data-aos="fade-up" data-aos-delay="200">
+                    <select name="" id="">
+                        <option value="" selected="selected">Danh mục</option>
+                        <option value="accessories-parts">Hàng phổ biến</option>
+                        <option value="activewear">Hàng tươi sạch</option>
+                        <option value="amplifire">Hàng nhập khẩu</option>
+                        <option value="appliances">Hàng mới về</option>
+                        <option value="arc-radio">Hàng Nhật</option>
+                        <option value="bags">Hàng Mỹ</option>
+                        <option value="ballet-flats">Thực phẩm giá cao</option>
+                        <option value="bangles">Thực phẩm giá trung</option>
+                        <option value="bed-sheets">Thực phẩm thiết yếu</option>
+                        <option value="beds">Hàng tồn kho</option>
+                        <option value="belts">Hàng sale</option>
+                      
+                        <option value="packaging-printing">Packaging &amp; Printing</option>
+                    </select>
+                    <input type="text" name="" id="" placeholder="Tìm kiếm...">
+                </div>
+                <button class="search-button">Tìm kiếm</button>
+                <div class="search-icon d-none">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+            </div>
+        </nav>
+
+        <div class="slider">
+            <aside class="category-header" id="category-header" style="
+            display: none;
+            position: absolute;
+            z-index: 99;
+            background-color: #ffffff;">
+                <ul>
+                    <li><a href="">🍒Rau củ quả</a></li>
+                    <li><a href="">🍞 Thức ăn khô</a></li>
+                    <li><a href="">🍭 Các món ăn vặt</a></li>
+                    <li><a href="">🍦 Món ăn cho trẻ</a></li>
+                    <li><a href="">🍔 Thực phẩm chức năng</a></li>
+                    <li><a href="">🍤 Hải sản</a></li>
+                    <li><a href="">✴️ Đồ ăn ưa thích</a></li>
+                    <li><a href="">✔️ Top bán chạy</a></li>
+                    <li><a href="">🍱 Thức ăn dành cho người cao tuổi</a></li>
+                </ul>
+            </aside>
+        </div>
+    </header>
+    <main id="login-site"data-aos="fade-up" data-aos-delay="200">
+        <section>
+            <form action="" id="login-form" method="GET">
+                <div class="login-icon">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </div>
+                <h1 data-aos="fade-up" data-aos-delay="200">Đăng nhập</h1>
+                <input type="text" id="login-username" placeholder="Email" required>
+                <input type="password" name="login-password" id="login-password" placeholder="Password" required>
+                <input type="checkbox" name="remember" id="login-remember" style="width: auto; display: inline-block;">
+                <label for="remember" style="width: auto; display: inline-block;">Nhớ mật khẩu</label>
+                <button onclick="submitForm()" type="button">Đăng nhập</button>
+                <a href="./register.html">Đăng kí</a>
+                <a href="">Quên mật khẩu</a>
+            </form>
+        </section>
+    </main>
+    </main>
+    <footer>
+        <section class="footer-widget"data-aos="fade-up" data-aos-delay="200">
+            <div class="widget-box">
+                <header>
+                    Thông tin liên hệ
+                </header>
+                <article>
+                    <ul>
+                        <li>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <a href=""><img src="./icon/map.png"> 137 Nguyễn Thị Thập, Phường Hòa Minh, TP Đà Nẵng</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <a href=""><img src="./icon/phone.png"> 0904965770</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <a href=""><img src="./icon/gmai.png"> Tramn4840@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <a href="https://www.facebook.com/sky.nguyen.5454/"><img src="./icon/iconface.png"> Nguyễn Minh Trâm</i></a>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+            <div class="widget-box">
+                <header>
+                    Liên kết
+                </header>
+                <article>
+                    <ul>
+                        <li>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <a href="">Facebook</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <a href="">Twitter</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <a href="">Instagram</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <a href="">Youtube</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <a href="">Linkdin</a>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+            <div class="widget-box">
+                <header>
+                    Hỗ trợ khách hàng
+                </header>
+                <article>
+                    <ul>
+                        <li>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <a href=""><img src="./icon/phone.png"> 0904965770</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <a href="">Hướng dẫn mua hàng</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <a href="">Hướng dẫn thanh toán</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <a href="">Chế độ khách hàng</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <a href="">Chế độ đổi trả hàng</a>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+            <div class="widget-box">
+                <header>
+                    Danh sách
+                </header>
+                <article>
+                    <ul>
+                        <li>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <a href="">Khách hàng vip</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <a href="">Khách hàng tốt</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <a href="">Khách hàng bình thường</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <a href="">Hướng dẫn đăng kí </a>
+                        </li>
+                        <li>
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <a href="">Hỗ trợ khách hàng 24/7</a>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+            <div class="widget-box">
+                <header>
+                    Tải ứng dụng
+                </header>
+                <article>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="./images/appstone.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img size="12px" src="./images/googleplay.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+        <section class="footer-bottom">
+            <div class="site-info">
+                bản quyền trang web - Nguyễn Minh Trâm
+            </div>
+        </section>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>  AOS.init();</script>
+</body>
+
+</html>
